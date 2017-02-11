@@ -780,10 +780,10 @@ def cuda_library(deps=None, cuda_deps=None, copts=None, **kwargs):
     copts = []
 
   native.cc_library(
-      deps = deps + if_cuda(cuda_deps + [
+      deps = deps + cuda_deps + [
           "//tensorflow/core:cuda",
           "@local_config_cuda//cuda:cuda_headers"
-      ]),
+      ],
       copts = copts + if_cuda(["-DGOOGLE_CUDA=1"]),
       **kwargs)
 
