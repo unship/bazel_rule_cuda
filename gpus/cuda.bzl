@@ -756,7 +756,7 @@ Args:
 """
 
 
-def tf_cuda_library(deps=None, cuda_deps=None, copts=None, **kwargs):
+def cuda_library(deps=None, cuda_deps=None, copts=None, **kwargs):
   """Generate a cc_library with a conditional set of CUDA dependencies.
 
   When the library is built with --config=cuda:
