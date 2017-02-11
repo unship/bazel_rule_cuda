@@ -781,7 +781,7 @@ def cuda_library(deps=None, cuda_deps=None, copts=None, **kwargs):
 
   native.cc_library(
       deps = deps + cuda_deps + [
-          "@local_config_cuda//cuda:cuda_headers"
+          "@local_config_cuda//cuda:cuda"
       ],
       copts = copts + ["-DGOOGLE_CUDA=1"],
       **kwargs)
