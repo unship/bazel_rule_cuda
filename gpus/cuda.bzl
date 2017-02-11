@@ -781,7 +781,6 @@ def cuda_library(deps=None, cuda_deps=None, copts=None, **kwargs):
 
   native.cc_library(
       deps = deps + cuda_deps + [
-          "//tensorflow/core:cuda",
           "@local_config_cuda//cuda:cuda_headers"
       ],
       copts = copts + ["-DGOOGLE_CUDA=1"],
